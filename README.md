@@ -4,8 +4,8 @@ You can have PHP logic directly in SvelteKit route directory like this: `+page.s
 
 ```PHP
 <?php
-function load(array $event) {
-    $name = ($event['params']['name'] ?? 'unknownn');
+function load($event) {
+    $name = ($event->params['name'] ?? 'unknownn');
     return [
         'message' => "Hello " . $name,
     ];
